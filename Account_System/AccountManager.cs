@@ -16,7 +16,7 @@ namespace tst_project
 
         public AccountManager() { }
 
-        private void logInUser(string username, string password)
+        public void logInUser(string username, string password)
         {
             // Temporary
             if (adminAcc.validateCredentials(username, password))
@@ -24,6 +24,10 @@ namespace tst_project
                 CurrentLoggedInUser = adminAcc;
             }
             //
+        }
+        public void updateStatsFromGame(Session session)
+        {
+            CurrentLoggedInUser.updateStats(session.Score, session.TypingSpeed);
         }
     }
 }
