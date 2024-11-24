@@ -19,5 +19,10 @@ namespace tst_project.Account_System
             this.Password = password;
             this.UserID = userID;
         }
+
+        public bool validateCredentials(string username, string password)
+        {
+            return this.Username == username && this.Password == password;
+        }
     }
 }

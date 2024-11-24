@@ -9,6 +9,21 @@ namespace tst_project
 {
     internal class AccountManager
     {
+        // Temporary
+        public User adminAcc = new User("admin123", "admin123", 0);
+        //
         private User CurrentLoggedInUser { get; set; }
+
+        public AccountManager() { }
+
+        private void logInUser(string username, string password)
+        {
+            // Temporary
+            if (adminAcc.validateCredentials(username, password))
+            {
+                CurrentLoggedInUser = adminAcc;
+            }
+            //
+        }
     }
 }

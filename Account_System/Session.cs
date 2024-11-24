@@ -8,6 +8,7 @@ namespace tst_project.Account_System
 {
     internal class Session
     {
+        // Question to be asked, getters and setters + empty constructor (just object to be created in order to call it's methods)
         public float Score { get; set; }
         public float TypingSpeed { get; set; }
 
