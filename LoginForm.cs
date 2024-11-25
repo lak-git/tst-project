@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
+using tst_project.Account_System;
 
 namespace tst_project
 {
@@ -27,13 +29,23 @@ namespace tst_project
 
         private void Username_TextChanged(object sender, EventArgs e)
         {
-
+       
         }
 
         private void BackToRegister_Click(object sender, EventArgs e)
         {
             new MainMenu().Show();
             this.Hide();
+        }
+
+        private void Password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

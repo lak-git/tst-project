@@ -69,6 +69,7 @@
             this.Login.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.Login.UseAccentColor = false;
             this.Login.UseVisualStyleBackColor = true;
+            this.Login.Click += new System.EventHandler(this.Login_Click);
             // 
             // Password
             // 
@@ -88,6 +89,7 @@
             this.Password.TabIndex = 11;
             this.Password.Text = "";
             this.Password.TrailingIcon = null;
+            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // Username
             // 
