@@ -40,18 +40,19 @@
             this.BackToRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackToRegister.Depth = 0;
             this.BackToRegister.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.BackToRegister.Location = new System.Drawing.Point(71, 324);
+            this.BackToRegister.Location = new System.Drawing.Point(87, 324);
             this.BackToRegister.MouseState = MaterialSkin.MouseState.HOVER;
             this.BackToRegister.Name = "BackToRegister";
-            this.BackToRegister.Size = new System.Drawing.Size(130, 19);
+            this.BackToRegister.Size = new System.Drawing.Size(98, 19);
             this.BackToRegister.TabIndex = 13;
-            this.BackToRegister.Text = "Create an Account";
+            this.BackToRegister.Text = "Back to Menu";
             this.BackToRegister.UseAccent = true;
             this.BackToRegister.Click += new System.EventHandler(this.BackToRegister_Click);
             // 
             // Login
             // 
             this.Login.AutoSize = false;
+            this.Login.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Login.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.Login.Depth = 0;
             this.Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;

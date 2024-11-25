@@ -7,14 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
 using MaterialSkin.Controls;
 
 namespace tst_project
 {
-    public partial class RegistrationForm : MaterialForm
+    public partial class MainMenu : MaterialForm
     {
         readonly MaterialSkin.MaterialSkinManager materialSkinManager;
-        public RegistrationForm()
+        public MainMenu()
         {
             InitializeComponent();
             materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
@@ -25,29 +26,25 @@ namespace tst_project
 
         }
 
-        private void RegistrationForm_Load(object sender, EventArgs e)
+        private void MainMenu_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Username_TextChanged(object sender, EventArgs e)
+        private void Login_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void BackToLogin_Click(object sender, EventArgs e)
-        {
-            new MainMenu().Show();
+            new LoginForm().Show();
             this.Hide();
         }
 
-        private void Password_TextChanged(object sender, EventArgs e)
+        private void Register_Click(object sender, EventArgs e)
         {
-
+            new RegistrationForm().Show();
+            this.Hide();
         }
 
-        private void Register_Click(object sender, EventArgs e)
-        {   
+        private void StartGame_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -41,18 +41,19 @@
             this.BackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackToLogin.Depth = 0;
             this.BackToLogin.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.BackToLogin.Location = new System.Drawing.Point(76, 324);
+            this.BackToLogin.Location = new System.Drawing.Point(87, 324);
             this.BackToLogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.BackToLogin.Name = "BackToLogin";
-            this.BackToLogin.Size = new System.Drawing.Size(121, 19);
+            this.BackToLogin.Size = new System.Drawing.Size(98, 19);
             this.BackToLogin.TabIndex = 8;
-            this.BackToLogin.Text = "Login to Account";
+            this.BackToLogin.Text = "Back to Menu";
             this.BackToLogin.UseAccent = true;
             this.BackToLogin.Click += new System.EventHandler(this.BackToLogin_Click);
             // 
             // Register
             // 
             this.Register.AutoSize = false;
+            this.Register.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Register.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.Register.Depth = 0;
             this.Register.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -69,6 +70,7 @@
             this.Register.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.Register.UseAccentColor = false;
             this.Register.UseVisualStyleBackColor = true;
+            this.Register.Click += new System.EventHandler(this.Register_Click);
             // 
             // Password
             // 

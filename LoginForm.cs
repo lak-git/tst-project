@@ -32,7 +32,7 @@ namespace tst_project
 
         private void BackToRegister_Click(object sender, EventArgs e)
         {
-            new RegistrationForm().Show();
+            new MainMenu().Show();
             this.Hide();
         }
     }
