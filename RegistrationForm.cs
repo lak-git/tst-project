@@ -47,15 +47,32 @@ namespace tst_project
 
         }
 
-        private void Register_Click(object sender, EventArgs e)
-        {   
-
-        }
-
-        private SQLiteConnection GetConnection()
+        private AccountManager accountManager = new AccountManager();
+        private void RegisterBtn_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=bin\\Debug\\tstdb.sqlite;Version=3;";
-            return new SQLiteConnection(connectionString);
+            string username = UsernameField.Text;
+            string password = PasswordField.Text;
+            string confirmpassword = ConfirmPasswordField.Text;
+
+            if (username != null && password != null && password == confirmpassword) 
+            {
+                if (accountManager.validateCredentials(username, password))
+                {
+                    MessageBox.Show("Account Already Exists!");
+                }
+                else
+                {
+                    if (accountManager.createAccount(username, password))
+                    {   
+                    MessageBox.Show("Account Created Successfully");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid User or Password");
+            }
+
         }
     }
 }

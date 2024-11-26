@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.BackToLogin = new MaterialSkin.Controls.MaterialLabel();
-            this.Register = new MaterialSkin.Controls.MaterialButton();
+            this.RegisterBtn = new MaterialSkin.Controls.MaterialButton();
             this.PasswordField = new MaterialSkin.Controls.MaterialTextBox();
             this.UsernameField = new MaterialSkin.Controls.MaterialTextBox();
             this.ConfirmPasswordField = new MaterialSkin.Controls.MaterialTextBox();
@@ -50,27 +50,27 @@
             this.BackToLogin.UseAccent = true;
             this.BackToLogin.Click += new System.EventHandler(this.BackToLogin_Click);
             // 
-            // Register
+            // RegisterBtn
             // 
-            this.Register.AutoSize = false;
-            this.Register.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Register.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.Register.Depth = 0;
-            this.Register.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Register.HighEmphasis = true;
-            this.Register.Icon = null;
-            this.Register.Location = new System.Drawing.Point(20, 282);
-            this.Register.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Register.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Register.Name = "Register";
-            this.Register.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.Register.Size = new System.Drawing.Size(233, 36);
-            this.Register.TabIndex = 7;
-            this.Register.Text = "REGISTER";
-            this.Register.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.Register.UseAccentColor = false;
-            this.Register.UseVisualStyleBackColor = true;
-            this.Register.Click += new System.EventHandler(this.Register_Click);
+            this.RegisterBtn.AutoSize = false;
+            this.RegisterBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.RegisterBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.RegisterBtn.Depth = 0;
+            this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RegisterBtn.HighEmphasis = true;
+            this.RegisterBtn.Icon = null;
+            this.RegisterBtn.Location = new System.Drawing.Point(20, 282);
+            this.RegisterBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.RegisterBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RegisterBtn.Name = "RegisterBtn";
+            this.RegisterBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.RegisterBtn.Size = new System.Drawing.Size(233, 36);
+            this.RegisterBtn.TabIndex = 7;
+            this.RegisterBtn.Text = "REGISTER";
+            this.RegisterBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.RegisterBtn.UseAccentColor = false;
+            this.RegisterBtn.UseVisualStyleBackColor = true;
+            this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
             // 
             // PasswordField
             // 
@@ -135,7 +135,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(272, 361);
-            this.Controls.Add(this.Register);
+            this.Controls.Add(this.RegisterBtn);
             this.Controls.Add(this.ConfirmPasswordField);
             this.Controls.Add(this.BackToLogin);
             this.Controls.Add(this.PasswordField);
@@ -152,7 +152,7 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialLabel BackToLogin;
-        private MaterialSkin.Controls.MaterialButton Register;
+        private MaterialSkin.Controls.MaterialButton RegisterBtn;
         private MaterialSkin.Controls.MaterialTextBox PasswordField;
         private MaterialSkin.Controls.MaterialTextBox UsernameField;
         private MaterialSkin.Controls.MaterialTextBox ConfirmPasswordField;

@@ -42,42 +42,20 @@ namespace tst_project
 
         }
 
-        private bool ValidateLogin(string username, string password)
-        {
-            const string ConnectionString = "Data Source=mydatabase.sqlite;Version=3;";
-
-            using (var connection = new SQLiteConnection(ConnectionString))
-            {
-                connection.Open();
-                string query = "SELECT Role FROM Users WHERE Username = @Username AND Password = @Password ";
-                using (var command = new SQLiteCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@Password", password);
-
-                    using (var reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            string role = reader["Role"].ToString();
-                            MessageBox.Show($"Success! Role: {role}");
-                            return true;
-                        }
-                    }
-                }
-            }
-
-            MessageBox.Show("Invalid Username or Password");
-            return false;
-        }
+        private AccountManager accountManager = new AccountManager();
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             string username = UsernameField.Text;
             string password = PasswordField.Text;
 
-            if (ValidateLogin(username, password))
+            if (accountManager.validateCredentials(username, password))
             {
+                MessageBox.Show("Success");
+            }
+            else
+            {
+                MessageBox.Show("Invalid User or Password");
             }
 
         }
