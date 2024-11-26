@@ -30,9 +30,9 @@
         {
             this.BackToLogin = new MaterialSkin.Controls.MaterialLabel();
             this.Register = new MaterialSkin.Controls.MaterialButton();
-            this.Password = new MaterialSkin.Controls.MaterialTextBox();
-            this.Username = new MaterialSkin.Controls.MaterialTextBox();
-            this.ConfirmPassword = new MaterialSkin.Controls.MaterialTextBox();
+            this.PasswordField = new MaterialSkin.Controls.MaterialTextBox();
+            this.UsernameField = new MaterialSkin.Controls.MaterialTextBox();
+            this.ConfirmPasswordField = new MaterialSkin.Controls.MaterialTextBox();
             this.SuspendLayout();
             // 
             // BackToLogin
@@ -72,63 +72,63 @@
             this.Register.UseVisualStyleBackColor = true;
             this.Register.Click += new System.EventHandler(this.Register_Click);
             // 
-            // Password
+            // PasswordField
             // 
-            this.Password.AnimateReadOnly = false;
-            this.Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Password.Depth = 0;
-            this.Password.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.Password.Hint = "Password";
-            this.Password.LeadingIcon = null;
-            this.Password.Location = new System.Drawing.Point(20, 146);
-            this.Password.MaxLength = 50;
-            this.Password.MouseState = MaterialSkin.MouseState.OUT;
-            this.Password.Multiline = false;
-            this.Password.Name = "Password";
-            this.Password.Password = true;
-            this.Password.Size = new System.Drawing.Size(233, 50);
-            this.Password.TabIndex = 6;
-            this.Password.Text = "";
-            this.Password.TrailingIcon = null;
-            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
+            this.PasswordField.AnimateReadOnly = false;
+            this.PasswordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PasswordField.Depth = 0;
+            this.PasswordField.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.PasswordField.Hint = "Password";
+            this.PasswordField.LeadingIcon = null;
+            this.PasswordField.Location = new System.Drawing.Point(20, 146);
+            this.PasswordField.MaxLength = 50;
+            this.PasswordField.MouseState = MaterialSkin.MouseState.OUT;
+            this.PasswordField.Multiline = false;
+            this.PasswordField.Name = "PasswordField";
+            this.PasswordField.Password = true;
+            this.PasswordField.Size = new System.Drawing.Size(233, 50);
+            this.PasswordField.TabIndex = 6;
+            this.PasswordField.Text = "";
+            this.PasswordField.TrailingIcon = null;
+            this.PasswordField.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
-            // Username
+            // UsernameField
             // 
-            this.Username.AnimateReadOnly = false;
-            this.Username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Username.Depth = 0;
-            this.Username.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.Username.Hint = "Username";
-            this.Username.LeadingIcon = null;
-            this.Username.Location = new System.Drawing.Point(20, 81);
-            this.Username.MaxLength = 50;
-            this.Username.MouseState = MaterialSkin.MouseState.OUT;
-            this.Username.Multiline = false;
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(233, 50);
-            this.Username.TabIndex = 5;
-            this.Username.Text = "";
-            this.Username.TrailingIcon = null;
-            this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
+            this.UsernameField.AnimateReadOnly = false;
+            this.UsernameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UsernameField.Depth = 0;
+            this.UsernameField.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.UsernameField.Hint = "Username";
+            this.UsernameField.LeadingIcon = null;
+            this.UsernameField.Location = new System.Drawing.Point(20, 81);
+            this.UsernameField.MaxLength = 50;
+            this.UsernameField.MouseState = MaterialSkin.MouseState.OUT;
+            this.UsernameField.Multiline = false;
+            this.UsernameField.Name = "UsernameField";
+            this.UsernameField.Size = new System.Drawing.Size(233, 50);
+            this.UsernameField.TabIndex = 5;
+            this.UsernameField.Text = "";
+            this.UsernameField.TrailingIcon = null;
+            this.UsernameField.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
-            // ConfirmPassword
+            // ConfirmPasswordField
             // 
-            this.ConfirmPassword.AnimateReadOnly = false;
-            this.ConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ConfirmPassword.Depth = 0;
-            this.ConfirmPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ConfirmPassword.Hint = "Confirm Password";
-            this.ConfirmPassword.LeadingIcon = null;
-            this.ConfirmPassword.Location = new System.Drawing.Point(20, 211);
-            this.ConfirmPassword.MaxLength = 50;
-            this.ConfirmPassword.MouseState = MaterialSkin.MouseState.OUT;
-            this.ConfirmPassword.Multiline = false;
-            this.ConfirmPassword.Name = "ConfirmPassword";
-            this.ConfirmPassword.Password = true;
-            this.ConfirmPassword.Size = new System.Drawing.Size(233, 50);
-            this.ConfirmPassword.TabIndex = 9;
-            this.ConfirmPassword.Text = "";
-            this.ConfirmPassword.TrailingIcon = null;
+            this.ConfirmPasswordField.AnimateReadOnly = false;
+            this.ConfirmPasswordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ConfirmPasswordField.Depth = 0;
+            this.ConfirmPasswordField.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ConfirmPasswordField.Hint = "Confirm Password";
+            this.ConfirmPasswordField.LeadingIcon = null;
+            this.ConfirmPasswordField.Location = new System.Drawing.Point(20, 211);
+            this.ConfirmPasswordField.MaxLength = 50;
+            this.ConfirmPasswordField.MouseState = MaterialSkin.MouseState.OUT;
+            this.ConfirmPasswordField.Multiline = false;
+            this.ConfirmPasswordField.Name = "ConfirmPasswordField";
+            this.ConfirmPasswordField.Password = true;
+            this.ConfirmPasswordField.Size = new System.Drawing.Size(233, 50);
+            this.ConfirmPasswordField.TabIndex = 9;
+            this.ConfirmPasswordField.Text = "";
+            this.ConfirmPasswordField.TrailingIcon = null;
             // 
             // RegistrationForm
             // 
@@ -136,10 +136,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(272, 361);
             this.Controls.Add(this.Register);
-            this.Controls.Add(this.ConfirmPassword);
+            this.Controls.Add(this.ConfirmPasswordField);
             this.Controls.Add(this.BackToLogin);
-            this.Controls.Add(this.Password);
-            this.Controls.Add(this.Username);
+            this.Controls.Add(this.PasswordField);
+            this.Controls.Add(this.UsernameField);
             this.Name = "RegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
@@ -153,8 +153,8 @@
 
         private MaterialSkin.Controls.MaterialLabel BackToLogin;
         private MaterialSkin.Controls.MaterialButton Register;
-        private MaterialSkin.Controls.MaterialTextBox Password;
-        private MaterialSkin.Controls.MaterialTextBox Username;
-        private MaterialSkin.Controls.MaterialTextBox ConfirmPassword;
+        private MaterialSkin.Controls.MaterialTextBox PasswordField;
+        private MaterialSkin.Controls.MaterialTextBox UsernameField;
+        private MaterialSkin.Controls.MaterialTextBox ConfirmPasswordField;
     }
 }

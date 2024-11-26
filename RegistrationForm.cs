@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
+using System.Data.SQLite;
 
 namespace tst_project
 {
@@ -49,6 +50,12 @@ namespace tst_project
         private void Register_Click(object sender, EventArgs e)
         {   
 
+        }
+
+        private SQLiteConnection GetConnection()
+        {
+            string connectionString = "Data Source=bin\\Debug\\tstdb.sqlite;Version=3;";
+            return new SQLiteConnection(connectionString);
         }
     }
 }
