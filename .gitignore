@@ -399,6 +399,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 /obj/Debug
-obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-obj/Debug/tst-project.csproj.AssemblyReference.cache
 *.cache
