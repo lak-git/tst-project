@@ -30,7 +30,7 @@
         {
             this.Register = new MaterialSkin.Controls.MaterialButton();
             this.Login = new MaterialSkin.Controls.MaterialButton();
-            this.StartGame = new MaterialSkin.Controls.MaterialButton();
+            this.StartGameBtn = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // Register
@@ -77,34 +77,34 @@
             this.Login.UseVisualStyleBackColor = true;
             this.Login.Click += new System.EventHandler(this.Login_Click);
             // 
-            // StartGame
+            // StartGameBtn
             // 
-            this.StartGame.AutoSize = false;
-            this.StartGame.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.StartGame.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.StartGame.Depth = 0;
-            this.StartGame.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.StartGame.HighEmphasis = true;
-            this.StartGame.Icon = null;
-            this.StartGame.Location = new System.Drawing.Point(19, 138);
-            this.StartGame.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.StartGame.MouseState = MaterialSkin.MouseState.HOVER;
-            this.StartGame.Name = "StartGame";
-            this.StartGame.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.StartGame.Size = new System.Drawing.Size(233, 36);
-            this.StartGame.TabIndex = 14;
-            this.StartGame.Text = "Start Game";
-            this.StartGame.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.StartGame.UseAccentColor = false;
-            this.StartGame.UseVisualStyleBackColor = true;
-            this.StartGame.Click += new System.EventHandler(this.StartGame_Click);
+            this.StartGameBtn.AutoSize = false;
+            this.StartGameBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.StartGameBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.StartGameBtn.Depth = 0;
+            this.StartGameBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.StartGameBtn.HighEmphasis = true;
+            this.StartGameBtn.Icon = null;
+            this.StartGameBtn.Location = new System.Drawing.Point(19, 138);
+            this.StartGameBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.StartGameBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.StartGameBtn.Name = "StartGameBtn";
+            this.StartGameBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.StartGameBtn.Size = new System.Drawing.Size(233, 36);
+            this.StartGameBtn.TabIndex = 14;
+            this.StartGameBtn.Text = "Start Game";
+            this.StartGameBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.StartGameBtn.UseAccentColor = false;
+            this.StartGameBtn.UseVisualStyleBackColor = true;
+            this.StartGameBtn.Click += new System.EventHandler(this.StartGame_Click);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(272, 361);
-            this.Controls.Add(this.StartGame);
+            this.Controls.Add(this.StartGameBtn);
             this.Controls.Add(this.Login);
             this.Controls.Add(this.Register);
             this.Name = "MainMenu";
@@ -119,6 +119,6 @@
 
         private MaterialSkin.Controls.MaterialButton Register;
         private MaterialSkin.Controls.MaterialButton Login;
-        private MaterialSkin.Controls.MaterialButton StartGame;
+        private MaterialSkin.Controls.MaterialButton StartGameBtn;
     }
 }
