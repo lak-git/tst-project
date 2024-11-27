@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
+using System.Data.SQLite;
 
 namespace tst_project
 {
@@ -34,6 +35,29 @@ namespace tst_project
         {
             new MainMenu().Show();
             this.Hide();
+        }
+
+        private void PasswordField_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private AccountManager accountManager = new AccountManager();
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            string username = UsernameField.Text;
+            string password = PasswordField.Text;
+
+            if (accountManager.validateCredentials(username, password))
+            {
+                MessageBox.Show("Success");
+            }
+            else
+            {
+                MessageBox.Show("Invalid User or Password");
+            }
+
         }
     }
 }
