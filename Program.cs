@@ -14,6 +14,7 @@ namespace tst_project
         [STAThread]
         static void Main()
         {
+            DatabaseInitializer.InitializeDatabase(); //Initialise the database w/ admin user
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainMenu());
