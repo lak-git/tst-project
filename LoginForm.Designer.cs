@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.BackToRegister = new MaterialSkin.Controls.MaterialLabel();
-            this.Login = new MaterialSkin.Controls.MaterialButton();
-            this.Password = new MaterialSkin.Controls.MaterialTextBox();
-            this.Username = new MaterialSkin.Controls.MaterialTextBox();
+            this.LoginBtn = new MaterialSkin.Controls.MaterialButton();
+            this.PasswordField = new MaterialSkin.Controls.MaterialTextBox();
+            this.UsernameField = new MaterialSkin.Controls.MaterialTextBox();
             this.SuspendLayout();
             // 
             // BackToRegister
@@ -49,64 +49,66 @@
             this.BackToRegister.UseAccent = true;
             this.BackToRegister.Click += new System.EventHandler(this.BackToRegister_Click);
             // 
-            // Login
+            // LoginBtn
             // 
-            this.Login.AutoSize = false;
-            this.Login.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Login.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.Login.Depth = 0;
-            this.Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Login.HighEmphasis = true;
-            this.Login.Icon = null;
-            this.Login.Location = new System.Drawing.Point(20, 282);
-            this.Login.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Login.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Login.Name = "Login";
-            this.Login.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.Login.Size = new System.Drawing.Size(233, 36);
-            this.Login.TabIndex = 12;
-            this.Login.Text = "LOGIN";
-            this.Login.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.Login.UseAccentColor = false;
-            this.Login.UseVisualStyleBackColor = true;
+            this.LoginBtn.AutoSize = false;
+            this.LoginBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.LoginBtn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.LoginBtn.Depth = 0;
+            this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.LoginBtn.HighEmphasis = true;
+            this.LoginBtn.Icon = null;
+            this.LoginBtn.Location = new System.Drawing.Point(20, 282);
+            this.LoginBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.LoginBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LoginBtn.Name = "LoginBtn";
+            this.LoginBtn.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.LoginBtn.Size = new System.Drawing.Size(233, 36);
+            this.LoginBtn.TabIndex = 12;
+            this.LoginBtn.Text = "LOGIN";
+            this.LoginBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.LoginBtn.UseAccentColor = false;
+            this.LoginBtn.UseVisualStyleBackColor = true;
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
-            // Password
+            // PasswordField
             // 
-            this.Password.AnimateReadOnly = false;
-            this.Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Password.Depth = 0;
-            this.Password.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.Password.Hint = "Password";
-            this.Password.LeadingIcon = null;
-            this.Password.Location = new System.Drawing.Point(20, 150);
-            this.Password.MaxLength = 50;
-            this.Password.MouseState = MaterialSkin.MouseState.OUT;
-            this.Password.Multiline = false;
-            this.Password.Name = "Password";
-            this.Password.Password = true;
-            this.Password.Size = new System.Drawing.Size(233, 50);
-            this.Password.TabIndex = 11;
-            this.Password.Text = "";
-            this.Password.TrailingIcon = null;
+            this.PasswordField.AnimateReadOnly = false;
+            this.PasswordField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PasswordField.Depth = 0;
+            this.PasswordField.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.PasswordField.Hint = "Password";
+            this.PasswordField.LeadingIcon = null;
+            this.PasswordField.Location = new System.Drawing.Point(20, 150);
+            this.PasswordField.MaxLength = 50;
+            this.PasswordField.MouseState = MaterialSkin.MouseState.OUT;
+            this.PasswordField.Multiline = false;
+            this.PasswordField.Name = "PasswordField";
+            this.PasswordField.Password = true;
+            this.PasswordField.Size = new System.Drawing.Size(233, 50);
+            this.PasswordField.TabIndex = 11;
+            this.PasswordField.Text = "";
+            this.PasswordField.TrailingIcon = null;
+            this.PasswordField.TextChanged += new System.EventHandler(this.PasswordField_TextChanged);
             // 
-            // Username
+            // UsernameField
             // 
-            this.Username.AnimateReadOnly = false;
-            this.Username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Username.Depth = 0;
-            this.Username.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.Username.Hint = "Username";
-            this.Username.LeadingIcon = null;
-            this.Username.Location = new System.Drawing.Point(20, 86);
-            this.Username.MaxLength = 50;
-            this.Username.MouseState = MaterialSkin.MouseState.OUT;
-            this.Username.Multiline = false;
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(233, 50);
-            this.Username.TabIndex = 10;
-            this.Username.Text = "";
-            this.Username.TrailingIcon = null;
-            this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
+            this.UsernameField.AnimateReadOnly = false;
+            this.UsernameField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UsernameField.Depth = 0;
+            this.UsernameField.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.UsernameField.Hint = "Username";
+            this.UsernameField.LeadingIcon = null;
+            this.UsernameField.Location = new System.Drawing.Point(20, 86);
+            this.UsernameField.MaxLength = 50;
+            this.UsernameField.MouseState = MaterialSkin.MouseState.OUT;
+            this.UsernameField.Multiline = false;
+            this.UsernameField.Name = "UsernameField";
+            this.UsernameField.Size = new System.Drawing.Size(233, 50);
+            this.UsernameField.TabIndex = 10;
+            this.UsernameField.Text = "";
+            this.UsernameField.TrailingIcon = null;
+            this.UsernameField.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
             // LoginForm
             // 
@@ -114,9 +116,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(272, 361);
             this.Controls.Add(this.BackToRegister);
-            this.Controls.Add(this.Login);
-            this.Controls.Add(this.Password);
-            this.Controls.Add(this.Username);
+            this.Controls.Add(this.LoginBtn);
+            this.Controls.Add(this.PasswordField);
+            this.Controls.Add(this.UsernameField);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -128,8 +130,8 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialLabel BackToRegister;
-        private MaterialSkin.Controls.MaterialButton Login;
-        private MaterialSkin.Controls.MaterialTextBox Password;
-        private MaterialSkin.Controls.MaterialTextBox Username;
+        private MaterialSkin.Controls.MaterialButton LoginBtn;
+        private MaterialSkin.Controls.MaterialTextBox PasswordField;
+        private MaterialSkin.Controls.MaterialTextBox UsernameField;
     }
 }
