@@ -22,6 +22,11 @@ namespace tst_project
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
             materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Indigo500, MaterialSkin.Primary.Indigo700, MaterialSkin.Primary.Indigo100, MaterialSkin.Accent.Pink200, MaterialSkin.TextShade.WHITE);
+
+            TextHandler textHandler = new TextHandler();
+            ParagraphWrapper.Text = textHandler.RandomParagraph();
+            
         }
+
     }
 }

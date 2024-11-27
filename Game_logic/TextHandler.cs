@@ -115,6 +115,29 @@ namespace tst_project
 
         }
 
+        public string RandomParagraph()
+        {
+            using (var connection = CreateConnection()) 
+            {
+                string readQuery = @"
+                                    SELECT *
+                                    FROM Text
+                                    ORDER BY RANDOM()
+                                    LIMIT 1;";
+                using (var command = new SQLiteCommand(readQuery, connection)) 
+                {
+                    using (var reader = command.ExecuteReader()) 
+                    {
+                        if (reader.Read()) 
+                        {
+                            return reader["Paragraph"].ToString();//Returns paragraph value 
+                        }
+                    }
+                }
+
+            }
+            return null;
+        }
     }
 
 }
