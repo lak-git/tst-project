@@ -18,11 +18,10 @@ namespace tst_project.Game_logic
 
         public GameManager()
         {
-            timer = new Timer();
-            Account_Manager = new AccountManager();
-            CurrentSession = new Session();
-            Text_Handler = new TextHandler();
-            CurrentText = Text_Handler.RandomParagraph();
+            this.timer = new Timer();
+            this.Account_Manager = new AccountManager();
+            this.CurrentSession = new Session();
+            this.Text_Handler = new TextHandler();
         }
     }
 }
