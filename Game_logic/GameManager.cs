@@ -13,7 +13,6 @@ namespace tst_project.Game_logic
     {
         public AccountManager Account_Manager;
         public Session CurrentSession;
-        public StatsCalculator Stats_Calculator;
         public TextHandler Text_Handler;
         public Timer timer;
         public string CurrentText;
@@ -23,7 +22,6 @@ namespace tst_project.Game_logic
         {
             this.Account_Manager = new AccountManager();
             this.CurrentSession = new Session();
-            this.Stats_Calculator = new StatsCalculator();
             this.Text_Handler = new TextHandler();
             this.timer = new Timer();
         }
@@ -33,12 +31,13 @@ namespace tst_project.Game_logic
             this.CurrentText = Text_Handler.RandomParagraph();
             this.timer.StartTimer();
         }
+
         public void StopGame()
         {
             float elapsedTime = timer.EndTimer();
-            float typingSpeed = Stats_Calculator.CalcTypingSpeed(UserInputText, elapsedTime);
-            float typingAccuracy = Stats_Calculator.CalcTypingAccuracy(CurrentText, UserInputText);
-            float score = Stats_Calculator.CalScore();
+            float typingSpeed = StatsCalculator.CalcTypingSpeed(UserInputText, elapsedTime);
+            float typingAccuracy = StatsCalculator.CalcTypingAccuracy(CurrentText, UserInputText);
+            float score = StatsCalculator.CalcScore(typingSpeed, typingAccuracy);
         }
     }
 }
