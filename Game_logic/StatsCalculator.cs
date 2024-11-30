@@ -8,32 +8,33 @@ namespace tst_project.Game_logic
 {
     internal class StatsCalculator
     {
-        public float typingSpeed { get; set; }
-        public float typingAccuracy { get; set; }
-        public float score { get; set; }
+        //public float typingSpeed { get; set; }
+        //public float typingAccuracy { get; set; }
+        //public float score { get; set; }
 
-        public StatsCalculator(float typingSpeed, float typingAccuracy, float score)
-        {
-            this.typingSpeed = typingSpeed;
-            this.typingAccuracy = typingAccuracy;
-            this.score = score;
-        }
-        public StatsCalculator()
-        {
-            typingSpeed = 0.0f;
-            typingAccuracy = 0.0f;
-            score = 0.0f;
-        }
+        //public StatsCalculator(float typingSpeed, float typingAccuracy, float score)
+        //{
+        //    this.typingSpeed = typingSpeed;
+        //    this.typingAccuracy = typingAccuracy;
+        //    this.score = score;
+        //}
+        //public StatsCalculator()
+        //{
+        //    typingSpeed = 0.0f;
+        //    typingAccuracy = 0.0f;
+        //    score = 0.0f;
+        //}
 
-        public float CalcTypingSpeed(string userText, float timeInSeconds)
+        public static float CalcTypingSpeed(string userText, float timeInSeconds)
         {
             string[] words = userText.Split(new char[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
             int wordCount = words.Length;
 
-            typingSpeed = (wordCount / timeInSeconds) * 60;
+            float typingSpeed = (wordCount / timeInSeconds) * 60;
+
             return typingSpeed;
         }
-        public float CalcTypingAccuracy(string originalText, string userText)
+        public static float CalcTypingAccuracy(string originalText, string userText)
         {
             float correctChars = 0;
             int length = Math.Min(originalText.Length, userText.Length);
@@ -44,13 +45,13 @@ namespace tst_project.Game_logic
                     correctChars++;
             }
 
-            typingAccuracy = (correctChars / originalText.Length) * 100;
+            float typingAccuracy = (correctChars / originalText.Length) * 100;
             return typingAccuracy;
         }
 
-        public float CalScore()
+        public static float CalcScore(float typingSpeed, float typingAccuracy)
         {
-            score = typingSpeed * typingAccuracy;
+             float score = typingSpeed * typingAccuracy;
             return score;
         }
     }
