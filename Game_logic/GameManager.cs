@@ -12,7 +12,7 @@ namespace tst_project.Game_logic
     internal class GameManager
     {
         public AccountManager Account_Manager;
-        public Session CurrentSession;
+        public Session CurrentSession; // Keeps track of the score of the ongoing game
         public TextHandler Text_Handler;
         public Timer timer;
         public string CurrentText;
@@ -26,18 +26,22 @@ namespace tst_project.Game_logic
             this.timer = new Timer();
         }
 
+        // Gets a random paragraph to display and starts the timer.
         public void StartGame()
         {
             this.CurrentText = Text_Handler.RandomParagraph();
             this.timer.StartTimer();
         }
 
+        // Stops timer and calculates the stats, then updates the session with it.
         public void StopGame()
         {
             float elapsedTime = timer.EndTimer();
             float typingSpeed = StatsCalculator.CalcTypingSpeed(UserInputText, elapsedTime);
             float typingAccuracy = StatsCalculator.CalcTypingAccuracy(CurrentText, UserInputText);
             float score = StatsCalculator.CalcScore(typingSpeed, typingAccuracy);
+
+            CurrentSession.UpdateStats(score, typingSpeed, typingAccuracy);
         }
     }
 }
