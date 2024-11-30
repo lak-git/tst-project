@@ -9,11 +9,18 @@ namespace tst_project.Game_logic
 {
     internal class GameManager
     {
-     
-        public AccountManager Account_Manager = new AccountManager();
-        public TextHandler Text_Handler = new TextHandler();
-        public Session CurrentSession = new Session();
+
+        public AccountManager Account_Manager;
+        public TextHandler Text_Handler;
+        public Session CurrentSession;
         public string CurrentText;
 
+        public GameManager()
+        {
+            Account_Manager = new AccountManager();
+            CurrentSession = new Session();
+            Text_Handler = new TextHandler();
+            CurrentText = Text_Handler.RandomParagraph();
+        }
     }
 }
