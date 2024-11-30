@@ -24,8 +24,12 @@ namespace tst_project.Game_logic
             typingAccuracy = 0.0f;
             score = 0.0f;
         }
-        public float CalcTypingSpeed(int wordCount, float timeInSeconds)
+
+        public float CalcTypingSpeed(string userText, float timeInSeconds)
         {
+            string[] words = userText.Split(new char[] { ' ', '\t', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            int wordCount = words.Length;
+
             typingSpeed = (wordCount / timeInSeconds) * 60;
             return typingSpeed;
         }
