@@ -79,7 +79,9 @@
     <Compile Include="GameScreen.Designer.cs">
       <DependentUpon>GameScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Game_logic\GameManager.cs" />
     <Compile Include="Game_logic\StatsCalculator.cs" />
+    <Compile Include="Game_logic\Timer.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
