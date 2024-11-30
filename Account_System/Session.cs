@@ -8,20 +8,46 @@ namespace tst_project.Account_System
 {
     internal class Session
     {
-        // Question to be asked, getters and setters + empty constructor (just object to be created in order to call it's methods)
-        public float Score { get; set; }
-        public float TypingSpeed { get; set; }
+        public float Score
+        {
+            get { return this.Score; }
+            private set
+            {
+                if (value >= 0) { this.Score = value; }
+                else { Console.WriteLine("Throw an error"); }
+            }
+        }
+        public float TypingSpeed
+        {
+            get { return this.TypingSpeed; }
+            private set
+            {
+                if (value >= 0) { this.TypingSpeed = value; }
+                else { Console.WriteLine("Throw an error"); }
+            }
+        }
+        public float TypingAccuracy
+        {
+            get { return this.TypingAccuracy; }
+            private set
+            {
+                if (value >= 0) { this.TypingAccuracy = value; }
+                else { Console.WriteLine("Throw an error"); }
+            }
+        }
 
         public Session()
         {
-            this.Score = 0;
             this.TypingSpeed = 0;
+            this.TypingAccuracy = 0;
+            this.Score = 0;
         }
 
-        public void updateStats(float score, float typingSpeed)
+        public void UpdateStats(float score, float typingSpeed, float typingAccuracy)
         {
-            this.Score = score;
             this.TypingSpeed = typingSpeed;
+            this.TypingAccuracy = typingAccuracy;
+            this.Score = score;
         }
     }
 }
