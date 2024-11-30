@@ -28,6 +28,17 @@ namespace tst_project.Game_logic
             this.timer = new Timer();
         }
 
-        
+        public void StartGame()
+        {
+            this.CurrentText = Text_Handler.RandomParagraph();
+            this.timer.StartTimer();
+        }
+        public void StopGame()
+        {
+            float elapsedTime = timer.EndTimer();
+            float typingSpeed = Stats_Calculator.CalcTypingSpeed(UserInputText, elapsedTime);
+            float typingAccuracy = Stats_Calculator.CalcTypingAccuracy(CurrentText, UserInputText);
+            float score = Stats_Calculator.CalScore();
+        }
     }
 }
