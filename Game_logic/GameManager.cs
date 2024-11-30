@@ -43,5 +43,8 @@ namespace tst_project.Game_logic
 
             CurrentSession.UpdateStats(score, typingSpeed, typingAccuracy);
         }
+
+        //TODO: Make it so that the game screen can use these methods and this class
+        //TODO: Make a result screen that displays the stats contained in the session, you could also make a method that returns the said stats
     }
 }
