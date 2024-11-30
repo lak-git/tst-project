@@ -13,10 +13,12 @@ namespace tst_project.Game_logic
         public AccountManager Account_Manager;
         public TextHandler Text_Handler;
         public Session CurrentSession;
+        public Timer timer;
         public string CurrentText;
 
         public GameManager()
         {
+            timer = new Timer();
             Account_Manager = new AccountManager();
             CurrentSession = new Session();
             Text_Handler = new TextHandler();
