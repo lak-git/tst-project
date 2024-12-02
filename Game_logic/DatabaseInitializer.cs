@@ -23,7 +23,7 @@ namespace tst_project
                         Id INTEGER PRIMARY KEY AUTOINCREMENT,
                         Username TEXT NOT NULL UNIQUE,
                         Password TEXT NOT NULL,
-                        Role TEXT NOT NULL
+                        Login BOOL NOT NULL
                     );";
                 using (var command = new SQLiteCommand(createTableQuery, connection)) 
                 {
@@ -31,8 +31,8 @@ namespace tst_project
                 }
 
                 string insertAdminQuery = @"
-                    INSERT INTO Users (Username, Password, Role)
-                    VALUES ('admin', 'admin123', 'admin')
+                    INSERT INTO Users (Username, Password, Login)
+                    VALUES ('admin', 'admin123', 'False')
                     ON CONFLICT(Username) DO NOTHING;";
                 using (var command = new SQLiteCommand(insertAdminQuery, connection))
                 { 
