@@ -80,7 +80,7 @@ namespace tst_project
 
         public void updateStatsFromGame(Session session)
         {
-            CurrentLoggedInUser.updateStats(session.Score, session.TypingSpeed);
+            CurrentLoggedInUser.UpdateStats(session.Score, session.TypingSpeed, session.TypingAccuracy);
         }
     }
 }
