@@ -19,7 +19,6 @@ namespace tst_project
             if (connection != null)
             {
                 Console.WriteLine("Connection established successfully!");
-                CreateTable();
                 connection.Close(); //Closes the connection after use
             }
         }
@@ -40,7 +39,7 @@ namespace tst_project
             }
             return sqliteConn;
         }
-
+        //creates table with SQL Query, and inputs sample paras with a for loop into the db
         public void CreateTable()
         {
             using (var connection = CreateConnection())
@@ -114,7 +113,7 @@ namespace tst_project
             }
 
         }
-
+        //Returns a string from a SQL Query from the Text Table in the SQL DB
         public string RandomParagraph()
         {
             using (var connection = CreateConnection()) 
