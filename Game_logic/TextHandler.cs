@@ -49,7 +49,7 @@ namespace tst_project
                 string createTableQuery = @"
                 CREATE TABLE IF NOT EXISTS Text (
                     ID INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Paragraph TEXT NOT NULL
+                    Paragraph TEXT NOT NULL UNIQUE
                     );";
 
                 string insertQuery = "INSERT INTO Text (Paragraph) VALUES (@Paragraph)";

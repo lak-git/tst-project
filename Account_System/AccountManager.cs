@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,7 @@ namespace tst_project
         //
 
         private const string ConnectionString = "Data Source=mydatabase.sqlite;Version=3;";
+
         private User CurrentLoggedInUser { get; set; }
 
         public AccountManager() { }
